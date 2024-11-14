@@ -38,6 +38,11 @@ public class CountryAdapter extends RecyclerView.Adapter<CountryAdapter.CountryV
         return countryList.size();
     }
 
+    public void updateData(List<String> newCountryList) {
+        countryList = newCountryList;
+        notifyDataSetChanged();
+    }
+
     public class CountryViewHolder extends RecyclerView.ViewHolder {
 
         private TextView textView;

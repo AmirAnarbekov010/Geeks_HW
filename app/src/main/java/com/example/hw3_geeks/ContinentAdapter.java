@@ -38,6 +38,11 @@ public class ContinentAdapter extends RecyclerView.Adapter<ContinentAdapter.Cont
         return continentList.size();
     }
 
+    public void updateData(List<String> newContinentList) {
+        continentList = newContinentList;
+        notifyDataSetChanged();
+    }
+
     public class ContinentViewHolder extends RecyclerView.ViewHolder {
 
         private TextView textView;
